@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Account</title>
+    <style>
+        body{
+            border: solid black;
+            padding: 5px;
+            padding-bottom: 50px;
+            max-width: fit-content;
+        }
+       .form-group {
+            display: flow-root;
+            flex-direction: column;
+        }
+       .form-group label {
+            margin-bottom: 5px;
+            border: solid black;
+        }
+       .form-group input {
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+       .form-group select {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+       .form-group.error {
+            color: red;
+            margin-top: 5px;
+        }
+        button{
+            margin-left: 100px;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-group"></div>
+    <h2>Register Account</h2>
+    <form>
+        <div>
+            <label for="username">Full Name:</label>
+            <input type="text" id="username" required placeholder="as">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required placeholder="..">
+        </div>
+        <div>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" required placeholder=".....">
+            <div class="error">Passwords must match.</div>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="john@gmail">
+            <div class="error">Format: john@gmail.com</div>
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required placeholder="111111111111111">
+            <div class="error">Format: 0XXX-XXX-XXX</div>
+        </div>
+        <div>
+            <label for="address">Zip Code:</label>
+            <input type="text" id="address" required placeholder="11111111111111111111111">
+            <div class="error">Format: Use 5 or 9 digits Zip Code
+            </div>
+            <div>
+                <label for="card">Card Type:</label>
+                <select id="card" required>
+                    <option value="card">Visa</option>
+                    <option value="bank">Bank Card</option>
+                </select>
+            </div> 
+            <div>
+                <label for="number">Card Number:</label>
+                <input type="number" id="number" required placeholder="111111111111111">
+                <div class="error">Format: 1111-2222-3333-4444</div>
+            </div>
+            <div>
+                <label for="date">Expiration Date:</label>
+                <input type="number" id="date" required placeholder="111111111111111">
+                <div class="error">Format: YYYY-MM-DD</div>
+            </div>
+        <button type="submit">Submit</button>
+        <button type="clear">Clear Form</button>
+    </form>
+</body>
+</html>
+
+
+
